@@ -23,6 +23,8 @@ class Stack(object):
         self.items.insert(0, Triplet(item, max_value, min_value))
 
     def pop(self):
+        if self.is_empty():
+            return None
         return self.items.pop(0).value
 
     def top(self):
