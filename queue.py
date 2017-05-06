@@ -1,8 +1,10 @@
+from stack import Stack
 
 class Queue(object):
 
     def __init__(self, items=[]):
-        self.items = items
+        self.in_stack = Stack(items)
+        self.out_stack = Stack()
 
     def enqueue(self, item):
         pass
@@ -23,4 +25,9 @@ class Queue(object):
         pass
 
     def get_items(self):
-        return self.items
+        res = []
+        for i in self.in_stack.items:
+            res.append(i.value)
+        for i in reversed(self.out_stack.items):
+            res.append(i.value)
+        return res
