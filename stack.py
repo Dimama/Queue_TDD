@@ -1,9 +1,9 @@
 
 class Triplet(object):
-    def __init__(self, value, maximum, minumum):
+    def __init__(self, value, maximum, minimum):
         self.value = value
         self.max_val = maximum
-        self.min_val = minumum
+        self.min_val = minimum
 
 class Stack(object):
 
